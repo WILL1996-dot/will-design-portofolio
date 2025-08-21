@@ -1,61 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="index.css" />
-<title>Will Design - Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>William Cooper – Front‑end Developer | Portfolio</title>
+  <meta name="description" content="Portfolio of Rayan Adlrdard, a Front‑end Developer specializing in responsive web design, UI/UX, and performance‑focused websites. View services, skills, and contact details." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://example.com/" />
+  <meta name="theme-color" content="#f4b400" />
+  <meta name="color-scheme" content="light dark" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="William D Cooper – Front‑end Developer" />
+  <meta property="og:description" content="Front‑end Developer portfolio: services, skills, projects, and contact." />
+  <meta property="og:url" content="https://example.com/" />
+  <meta property="og:image" content="https://example.com/preview.jpg" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="William D Cooper – Front‑end Developer" />
+  <meta name="twitter:description" content="Front‑end Developer portfolio: services, skills, projects, and contact." />
+  <meta name="twitter:image" content="https://example.com/preview.jpg" />
 
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="index.css" rel="stylesheet">
+
+  
 </head>
 <body>
+  <button class="theme-toggle" onclick="toggleTheme()" aria-pressed="false" aria-label="Toggle color theme">🌙 Dark Mode</button>
 
-<header>
-    <h1>Will design</h1>
-    <nav>
-        <a href="#" class="active">Home</a>
-        <a href="#">About Us</a>
-        <a href="#">Services</a>
-        <a href="#">Work</a>
-        <a href="#">Pricing</a>
-        <a href="#">Testimonial</a>
-    </nav>
-    <button class="btn-collab">LET'S COLLABORATE</button>
-</header>
+  <div class="container">
+    <div class="grid">
+      <!-- Sidebar -->
+      <aside class="sidebar" aria-label="Profile sidebar">
+        <div class="profile">
+          <img class="avatar" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' rx='60' fill='%23e5e7eb'/%3E%3Ctext x='50%25' y='57%25' 
+		  dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-weight='700' font-size='52' fill='%236b7280'%3ERA%3C/text%3E%3C/svg%3E" alt="Portrait avatar of William Cooper" loading="lazy" />
+          <div class="name">William D Cooper</div>
+          <div class="role">Front‑End Developer</div>
+          <div class="social" aria-label="Social links">
+            <a class="fb-link" href="https://www.facebook.com/profile.php?id=100008380150379" aria-label="Facebook" rel="me noopener"></a>
+            <a class="whatsapp-link" href="https://web.whatsapp.com/" aria-label="whatsapp" rel="me noopener"></a>
+            <a  class="instagram" href="#" aria-label="Instagram" rel="me noopener"></a>
+            <a class="linkin" href="#" aria-label="LinkedIn" rel="me noopener"></a>
+          </div>
+          <div class="badges">
+            <div class="badge"><span>Date of Birth</span><span>15-07-1996</span></div>
+            <div class="badge"><span>Residence</span><span>LBS</span></div>
+            <div class="badge"><span>Freelance</span><span style="color:var(--success)">Available</span></div>
+            <div class="badge"><span>Address</span><span>Omega, Paynesville</span></div>
+          </div>
+        </div>
 
-<section class="hero">
-    <div class="hero-text">
-        <div class="status">● Available for new projects</div>
-        <h1>Hey! I'm <span>Will</span></h1>
-        <h3>Full-Stack Web Developer & Digital Architect</h3>
-        <h3>
-            I am a passionate Frontend Web Developer with over 4 years of extensive experience in creating exceptional digital experiences.
-            My expertise spans across modern web technologies, responsive design, mobile applications, and desktop solutions that drive business growth and user engagement.
-        </h3>
-        <div class="tags">
-            <span>Frontend Development</span>
-            <span>UI/UX Design</span>
-            <span>Mobile Apps</span>
+        <div class="section" id="skills">
+          <h3>Languages</h3>
+          <div class="lang">
+           
+            
+            <div class="kv"><span>English</span><span>80%</span></div>
+            <div class="bar" aria-hidden="true"><i style="width:80%"></i></div>
+            
+          </div>
         </div>
-		
-		
-        <div class="buttons">
-            <button class="btn-yellow" id="action">EXPLORE MY WORK</button>
-            <button class="btn-dark">START A PROJECT</button>
+
+        <div class="section">
+          <h3>Skills</h3>
+          <div class="skills">
+            <div class="kv"><span>HTML</span><span>90%</span></div>
+            <div class="bar"><i style="width:90%"></i></div>
+            <div class="kv"><span>CSS</span><span>85%</span></div>
+            <div class="bar"><i style="width:85%"></i></div>
+            <div class="kv"><span>JavaScript</span><span>80%</span></div>
+            <div class="bar"><i style="width:80%"></i></div>
+            <div class="kv"><span>PHP</span><span>75%</span></div>
+            <div class="bar"><i style="width:75%"></i></div>
+            <div class="kv"><span>Deluge</span><span>85%</span></div>
+            <div class="bar"><i style="width:85%"></i></div>
+          </div>
         </div>
-		<hr/>
-        <div class="stats">
-            <div><strong>150+</strong><span>Projects Delivered</span></div>
-            <div><strong>75+</strong><span>Happy Clients</span></div>
-            <div><strong>4+</strong><span>Years Experience</span></div>
+
+        <div class="section">
+          <h3>Extra Skills</h3>
+          <ul class="extras" aria-label="Extra skills">
+            <li>Bootstrap, Materialize</li>
+            <li>Stylus, Sass, Less</li>
+            <li>Gulp, Webpack, Grunt</li>
+            <li>GIT Knowledge</li>
+          </ul>
         </div>
+
+       
+		<!-- Download CV Button -->
+		<a class="cta" href="cv.pdf" download="My-CV.pdf" class="btn">Download CV</a>
+      </aside>
+
+      <!-- Main content -->
+      <main id="main" class="main">
+        <section id="home" class="hero" aria-label="Intro">
+          <div>
+            <h1>I'm William D Cooper<br><span class="accent">Front‑end</span> Developer</h1>
+            <p>
+              I design and build fast, accessible, SEO‑friendly interfaces that scale. My focus is on clean
+			  component architectures, semantic HTML, modern CSS, and performance‑driven JavaScript. I partner with 
+			  teams to turn ideas into production‑ready web apps—tested, documented, and responsive across devices.
+            </p>
+            <div class="buttons">
+              <a href="#contact" class="btn" aria-label="Hire me">HIRE ME →</a>
+              <a href="#services" class="btn secondary" aria-label="My work">MY SERVICES</a>
+            </div>
+          </div>
+          <div class="hero-figure" aria-hidden="true">
+            <div class="figure">
+              <img src="Will.png" alt="William D Cooper">
+            </div>
+          </div>
+        </section>
+
+        <section id="services" class="section-card" aria-label="My services">
+          <h2>My Services</h2>
+          <p class="lead">Offering professional web development, UI/UX design, sound design,
+		  game design, photography, and advertising solutions tailored to client needs.</p>
+          <div class="services" role="list">
+            <article class="service" role="listitem">
+              <i aria-hidden="true">💻</i>
+              <h4>Web Development</h4>
+              <p>Blogs, E‑commerce, Informational etc</p>
+            </article>
+            <article class="service" role="listitem">
+              <i aria-hidden="true">📱</i>
+              <h4>UI/UX Design</h4>
+              <p>Mobile App, Website Design</p>
+            </article>
+            <article class="service" role="listitem">
+              <i aria-hidden="true">🎙️</i>
+              <h4>Software Development</h4>
+              <p>Busines</p>
+            </article>
+            <article class="service" role="listitem">
+              <i aria-hidden="true">🎮</i>
+              <h4>Auto Cad Project</h4>
+              <p>House plan, 3D, </p>
+            </article>
+            <article class="service" role="listitem">
+              <i aria-hidden="true">📷</i>
+              <h4>Graphic Design</h4>
+              <p>Product Design</p>
+            </article>
+            <article class="service" role="listitem">
+              <i aria-hidden="true">📣</i>
+              <h4>Advertising</h4>
+              <p>Creative campaigns and digital marketing support.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="contact" class="section-card" aria-label="Contact">
+          <h2>Contact</h2>
+          <p class="lead">Want to work together? Send a message and let's build something great.</p>
+          <form name="contact" method="post" data-netlify="true" style="max-width:680px;margin:0 auto;display:grid;gap:12px">
+            <input type="hidden" name="form-name" value="contact">
+            <label>Full name
+              <input required name="name" autocomplete="name" placeholder="Your name" style="width:100%;padding:12px;border:1px solid var(--line);border-radius:12px">
+            </label>
+            <label>Email
+              <input required type="email" name="email" autocomplete="email" placeholder="you@example.com" style="width:100%;padding:12px;border:1px solid var(--line);border-radius:12px">
+            </label>
+            <label>Message
+              <textarea required name="message" rows="4" placeholder="Tell me about your project" style="width:100%;padding:12px;border:1px solid var(--line);border-radius:12px"></textarea>
+            </label>
+            <button class="btn" type="submit" style="justify-content:center">Send Message</button>
+          </form>
+        </section>
+
+      </main>
     </div>
-	
+  </div>
 
-    <div class="hero-img">
-        <img src="will1.png" alt="Will">
-        <div class="badge">🏆 Top Rated Developer</div>
-    </div>
-</section>
-
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="index.js"></script>
+ 
 </body>
 </html>
