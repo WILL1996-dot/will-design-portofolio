@@ -1,230 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>William Cooper – Front‑end Developer | Portfolio</title>
+  <meta name="description" content="Portfolio of Rayan Adlrdard, a Front‑end Developer specializing in responsive web design, UI/UX, and performance‑focused websites. View services, skills, and contact details." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://example.com/" />
+  <meta name="theme-color" content="#f4b400" />
+  <meta name="color-scheme" content="light dark" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="William D Cooper – Front‑end Developer" />
+  <meta property="og:description" content="Front‑end Developer portfolio: services, skills, projects, and contact." />
+  <meta property="og:url" content="https://example.com/" />
+  <meta property="og:image" content="https://example.com/preview.jpg" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="William D Cooper – Front‑end Developer" />
+  <meta name="twitter:description" content="Front‑end Developer portfolio: services, skills, projects, and contact." />
+  <meta name="twitter:image" content="https://example.com/preview.jpg" />
 
-#action:hover{
-background-color: white;
-color: purple;
-}
-    body {
-        margin: 0;
-        font-family: 'Segoe UI', sans-serif;
-        background-color: #0b0616;
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="index.css" rel="stylesheet">
 
-        color: #ccc;
-    }
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px 8%;
-        flex-wrap: wrap;
-        background: #12011d;
-    }
-    header h1 {
-        color: #FFD700;
-        font-size: 22px;
-        flex: 1;
-    }
-    nav {
-        flex: 2;
-        text-align: center;
-    }
-    nav a {
-        text-decoration: none;
-        margin: 0 10px;
-        color: #fff;
-        font-weight: 500;
-        font-size: 14px;
-    }
-    nav a.active {
-        color: #FFD700;
-        border-bottom: 2px solid #FFD700;
-        padding-bottom: 4px;
-    }
-    .btn-collab {
-        background: #FFD700;
-        color: #000;
-        padding: 10px 20px;
-        border-radius: 25px;
-        font-weight: bold;
-        border: none;
-        cursor: pointer;
-        box-shadow: 0 4px 10px rgba(255,215,0,0.4);
-    }
-    .hero {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 60px 8%;
-        flex-wrap: wrap;
-        gap: 40px;
-    }
-    .hero-text {
-        flex: 1;
-        min-width: 280px;
-		
-    }
-    .status {
-        color: lime;
-        font-size: 14px;
-        margin-bottom: 10px;
-    }
-    .hero-text h1 {
-        font-size: 45px;
-        color: #fff;
-        margin: 10px 0;
-    }
-    .hero-text h1 span {
-        color: #FFD700;
-        border-bottom: 3px solid #FFD700;
-    }
-    .hero-text h3 {
-        font-weight: 500;
-        color: #d1c4ff;
-        margin-top: 0;
-    }
-    .hero-text p {
-        line-height: 1.6;
-        margin: 20px 0;
-        font-size: 15px;
-        color: #d1c4ff;
-    }
-    .tags {
-        margin: 20px 0;
-    }
-    .tags span {
-        display: inline-block;
-        background: #191428;
-        padding: 8px 15px;
-        border-radius: 8px;
-        margin: 5px 5px 0 0;
-        color: #fff;
-        font-size: 14px;
-        border: 1px solid #33294d;
-    }
-    .buttons {
-        margin: 25px 0;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 15px;
-    }
-    .buttons .btn-yellow {
-        background: #FFD700;
-        color: #000;
-        padding: 12px 20px;
-        border-radius: 25px;
-        font-weight: bold;
-        border: none;
-        cursor: pointer;
-        box-shadow: 0 4px 10px rgba(255,215,0,0.4);
-    }
-    .buttons .btn-dark {
-        background: #191428;
-        color: #fff;
-        padding: 12px 20px;
-        border-radius: 25px;
-        border: 1px solid #33294d;
-        cursor: pointer;
-    }
-    .stats {
-        display: flex;
-        gap: 40px;
-        margin-top: 30px;
-        color: #FFD700;
-        flex-wrap: wrap;
-    }
-    .stats div {
-        text-align: center;
-        min-width: 90px;
-    }
-    .stats div span {
-        display: block;
-        color: #fff;
-        font-size: 14px;
-    }
-    .hero-img {
-        position: relative;
-        width: 300px;
-        height: 300px;
-        border-radius: 50%;
-        background: radial-gradient(circle, rgba(255,215,0,0.1) 0%, transparent 70%);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-shrink: 0;
-    }
-    .hero-img img {
-        width: 28rem;
-        height: 28rem;
-        border-radius: 50%;
-        object-fit: cover;
-        
-    }
-    .badge {
-        position: absolute;
-        bottom: -20px;
-        background: #191428;
-        padding: 6px 12px;
-        border-radius: 8px;
-        border: 1px solid #33294d;
-        font-size: 13px;
-        color: #fff;
-        display: flex;
-        align-items: center;
-        gap: 5px;
-    }
+  
+</head>
+<body>
+  <button class="theme-toggle" onclick="toggleTheme()" aria-pressed="false" aria-label="Toggle color theme">🌙 Dark Mode</button>
 
-    /* Tablet */
-    @media (max-width: 1024px) {
-        nav {
-            flex-basis: 100%;
-            margin-top: 10px;
-        }
-        .hero {
-            flex-direction: column;
-            text-align: center;
-        }
-        .hero-text {
-            max-width: 100%;
-        }
-    }
+  <div class="container">
+    <div class="grid">
+      <!-- Sidebar -->
+      <aside class="sidebar" aria-label="Profile sidebar">
+        <div class="profile">
+          <img class="avatar" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' rx='60' fill='%23e5e7eb'/%3E%3Ctext x='50%25' y='57%25' 
+		  dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-weight='700' font-size='52' fill='%236b7280'%3ERA%3C/text%3E%3C/svg%3E" alt="Portrait avatar of William Cooper" loading="lazy" />
+          <div class="name">William D Cooper</div>
+          <div class="role">Front‑End Developer</div>
+          <div class="social" aria-label="Social links">
+            <a class="fb-link" href="https://www.facebook.com/profile.php?id=100008380150379" aria-label="Facebook" rel="me noopener"></a>
+            <a class="whatsapp-link" href="https://web.whatsapp.com/" aria-label="whatsapp" rel="me noopener"></a>
+            <a  class="instagram" href="#" aria-label="Instagram" rel="me noopener"></a>
+            <a class="linkin" href="#" aria-label="LinkedIn" rel="me noopener"></a>
+          </div>
+          <div class="badges">
+            <div class="badge"><span>Date of Birth</span><span>15-07-1996</span></div>
+            <div class="badge"><span>Residence</span><span>LBS</span></div>
+            <div class="badge"><span>Freelance</span><span style="color:var(--success)">Available</span></div>
+            <div class="badge"><span>Address</span><span>Omega, Paynesville</span></div>
+          </div>
+        </div>
 
-    /* Mobile */
-    @media (max-width: 768px) {
-        header {
-            flex-direction: column;
-            align-items: flex-start;
-        }
-        nav {
-            text-align: left;
-            margin-top: 10px;
-        }
-        .hero-text h1 {
-            font-size: 32px;
-        }
-        .hero-text h3 {
-            font-size: 16px;
-        }
-        .hero-img {
-            width: 250px;
-            height: 250px;
-        }
-        .hero-img img {
-            width: 180px;
-            height: 180px;
-        }
-    }
+        <div class="section" id="skills">
+          <h3>Languages</h3>
+          <div class="lang">
+           
+            
+            <div class="kv"><span>English</span><span>80%</span></div>
+            <div class="bar" aria-hidden="true"><i style="width:80%"></i></div>
+            
+          </div>
+        </div>
 
-    /* Small Mobile */
-    @media (max-width: 480px) {
-        .hero-text h1 {
-            font-size: 26px;
-        }
-        .hero-text p {
-            font-size: 14px;
-        }
-        .buttons {
-            flex-direction: column;
-        }
-        .stats {
-            justify-content: center;
-        }
-    }
+        <div class="section">
+          <h3>Skills</h3>
+          <div class="skills">
+            <div class="kv"><span>HTML</span><span>90%</span></div>
+            <div class="bar"><i style="width:90%"></i></div>
+            <div class="kv"><span>CSS</span><span>85%</span></div>
+            <div class="bar"><i style="width:85%"></i></div>
+            <div class="kv"><span>JavaScript</span><span>80%</span></div>
+            <div class="bar"><i style="width:80%"></i></div>
+            <div class="kv"><span>PHP</span><span>75%</span></div>
+            <div class="bar"><i style="width:75%"></i></div>
+            <div class="kv"><span>Deluge</span><span>85%</span></div>
+            <div class="bar"><i style="width:85%"></i></div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h3>Extra Skills</h3>
+          <ul class="extras" aria-label="Extra skills">
+            <li>Bootstrap, Materialize</li>
+            <li>Stylus, Sass, Less</li>
+            <li>Gulp, Webpack, Grunt</li>
+            <li>GIT Knowledge</li>
+          </ul>
+        </div>
+
+       
+		<!-- Download CV Button -->
+		<a class="cta" href="cv.pdf" download="My-CV.pdf" class="btn">Download CV</a>
+      </aside>
+
+      <!-- Main content -->
+      <main id="main" class="main">
+        <section id="home" class="hero" aria-label="Intro">
+          <div>
+            <h1>I'm William D Cooper<br><span class="accent">Front‑end</span> Developer</h1>
+            <p>
+              I design and build fast, accessible, SEO‑friendly interfaces that scale. My focus is on clean
+			  component architectures, semantic HTML, modern CSS, and performance‑driven JavaScript. I partner with 
+			  teams to turn ideas into production‑ready web apps—tested, documented, and responsive across devices.
+            </p>
+            <div class="buttons">
+              <a href="#contact" class="btn" aria-label="Hire me">HIRE ME →</a>
+              <a href="#services" class="btn secondary" aria-label="My work">MY SERVICES</a>
+            </div>
+          </div>
+          <div class="hero-figure" aria-hidden="true">
+            <div class="figure">
+              <img src="Will.png" alt="William D Cooper">
+            </div>
+          </div>
+        </section>
+
+        <section id="services" class="section-card" aria-label="My services">
+          <h2>My Services</h2>
+          <p class="lead">Offering professional web development, UI/UX design, sound design,
+		  game design, photography, and advertising solutions tailored to client needs.</p>
+          <div class="services" role="list">
+            <article class="service" role="listitem">
+              <i aria-hidden="true">💻</i>
+              <h4>Web Development</h4>
+              <p>Blogs, E‑commerce, Informational etc</p>
+            </article>
+            <article class="service" role="listitem">
+              <i aria-hidden="true">📱</i>
+              <h4>UI/UX Design</h4>
+              <p>Mobile App, Website Design</p>
+            </article>
+            <article class="service" role="listitem">
+              <i aria-hidden="true">🎙️</i>
+              <h4>Software Development</h4>
+              <p>Busines</p>
+            </article>
+            <article class="service" role="listitem">
+              <i aria-hidden="true">🎮</i>
+              <h4>Auto Cad Project</h4>
+              <p>House plan, 3D, </p>
+            </article>
+            <article class="service" role="listitem">
+              <i aria-hidden="true">📷</i>
+              <h4>Graphic Design</h4>
+              <p>Product Design</p>
+            </article>
+            <article class="service" role="listitem">
+              <i aria-hidden="true">📣</i>
+              <h4>Advertising</h4>
+              <p>Creative campaigns and digital marketing support.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="contact" class="section-card" aria-label="Contact">
+          <h2>Contact</h2>
+          <p class="lead">Want to work together? Send a message and let's build something great.</p>
+          <form name="contact" method="post" data-netlify="true" style="max-width:680px;margin:0 auto;display:grid;gap:12px">
+            <input type="hidden" name="form-name" value="contact">
+            <label>Full name
+              <input required name="name" autocomplete="name" placeholder="Your name" style="width:100%;padding:12px;border:1px solid var(--line);border-radius:12px">
+            </label>
+            <label>Email
+              <input required type="email" name="email" autocomplete="email" placeholder="you@example.com" style="width:100%;padding:12px;border:1px solid var(--line);border-radius:12px">
+            </label>
+            <label>Message
+              <textarea required name="message" rows="4" placeholder="Tell me about your project" style="width:100%;padding:12px;border:1px solid var(--line);border-radius:12px"></textarea>
+            </label>
+            <button class="btn" type="submit" style="justify-content:center">Send Message</button>
+          </form>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="index.js"></script>
+ 
+</body>
+</html>
