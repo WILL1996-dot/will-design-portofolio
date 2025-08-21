@@ -1,186 +1,154 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>William Cooper – Front‑end Developer | Portfolio</title>
-  <meta name="description" content="Portfolio of Rayan Adlrdard, a Front‑end Developer specializing in responsive web design, UI/UX, and performance‑focused websites. View services, skills, and contact details." />
-  <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://example.com/" />
-  <meta name="theme-color" content="#f4b400" />
-  <meta name="color-scheme" content="light dark" />
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="William D Cooper – Front‑end Developer" />
-  <meta property="og:description" content="Front‑end Developer portfolio: services, skills, projects, and contact." />
-  <meta property="og:url" content="https://example.com/" />
-  <meta property="og:image" content="https://example.com/preview.jpg" />
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="William D Cooper – Front‑end Developer" />
-  <meta name="twitter:description" content="Front‑end Developer portfolio: services, skills, projects, and contact." />
-  <meta name="twitter:image" content="https://example.com/preview.jpg" />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link href="index.css" rel="stylesheet">
+    :root{
+      --bg:#f5f6fb;
+      --card:#ffffff;
+      --text:#1f2937;
+      --muted:#6b7280;
+      --primary:#f4b400;
+      --primary-600:#d89f00;
+      --line:#e5e7eb;
+      --success:#22c55e;
+      --shadow:0 10px 30px rgba(17,24,39,.08);
+      --radius:18px;
+    }
 
-  
-</head>
-<body>
-  <button class="theme-toggle" onclick="toggleTheme()" aria-pressed="false" aria-label="Toggle color theme">🌙 Dark Mode</button>
+    body.dark{
+      --bg:#0b0616;
+      --card:#1f2937;
+      --text:#f9fafb;
+      --muted:#9ca3af;
+      --line:#374151;
+      --shadow:0 10px 30px rgba(0,0,0,.6);
+    }
 
-  <div class="container">
-    <div class="grid">
-      <!-- Sidebar -->
-      <aside class="sidebar" aria-label="Profile sidebar">
-        <div class="profile">
-          <img class="avatar" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' rx='60' fill='%23e5e7eb'/%3E%3Ctext x='50%25' y='57%25' 
-		  dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-weight='700' font-size='52' fill='%236b7280'%3ERA%3C/text%3E%3C/svg%3E" alt="Portrait avatar of William Cooper" loading="lazy" />
-          <div class="name">William D Cooper</div>
-          <div class="role">Front‑End Developer</div>
-          <div class="social" aria-label="Social links">
-            <a class="fb-link" href="https://www.facebook.com/profile.php?id=100008380150379" aria-label="Facebook" rel="me noopener"></a>
-            <a class="whatsapp-link" href="https://web.whatsapp.com/" aria-label="whatsapp" rel="me noopener"></a>
-            <a  class="instagram" href="#" aria-label="Instagram" rel="me noopener"></a>
-            <a class="linkin" href="#" aria-label="LinkedIn" rel="me noopener"></a>
-          </div>
-          <div class="badges">
-            <div class="badge"><span>Date of Birth</span><span>15-07-1996</span></div>
-            <div class="badge"><span>Residence</span><span>LBS</span></div>
-            <div class="badge"><span>Freelance</span><span style="color:var(--success)">Available</span></div>
-            <div class="badge"><span>Address</span><span>Omega, Paynesville</span></div>
-          </div>
-        </div>
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+      transition:background .3s,color .3s;
+    }
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1200px;margin:0 auto;padding:24px}
 
-        <div class="section" id="skills">
-          <h3>Languages</h3>
-          <div class="lang">
-           
-            
-            <div class="kv"><span>English</span><span>80%</span></div>
-            <div class="bar" aria-hidden="true"><i style="width:80%"></i></div>
-            
-          </div>
-        </div>
+    .grid{display:grid;grid-template-columns:320px 1fr;gap:24px;align-items:start}
 
-        <div class="section">
-          <h3>Skills</h3>
-          <div class="skills">
-            <div class="kv"><span>HTML</span><span>90%</span></div>
-            <div class="bar"><i style="width:90%"></i></div>
-            <div class="kv"><span>CSS</span><span>85%</span></div>
-            <div class="bar"><i style="width:85%"></i></div>
-            <div class="kv"><span>JavaScript</span><span>80%</span></div>
-            <div class="bar"><i style="width:80%"></i></div>
-            <div class="kv"><span>PHP</span><span>75%</span></div>
-            <div class="bar"><i style="width:75%"></i></div>
-            <div class="kv"><span>Deluge</span><span>85%</span></div>
-            <div class="bar"><i style="width:85%"></i></div>
-          </div>
-        </div>
+    /* Dark mode toggle */
+    .theme-toggle{position:fixed;top:20px;left:20px;padding:10px 14px;background:var(--primary);border:none;border-radius:12px;font-weight:700;cursor:pointer;z-index:100}
+    .theme-toggle:hover{background:var(--primary-600)}
 
-        <div class="section">
-          <h3>Extra Skills</h3>
-          <ul class="extras" aria-label="Extra skills">
-            <li>Bootstrap, Materialize</li>
-            <li>Stylus, Sass, Less</li>
-            <li>Gulp, Webpack, Grunt</li>
-            <li>GIT Knowledge</li>
-          </ul>
-        </div>
+    /* Sidebar */
+    .sidebar{position:sticky;top:24px;background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+    .profile{padding:28px}
+    .avatar{width:92px;height:92px;border-radius:50%;display:block;margin:0 auto 14px;object-fit:cover;border:4px solid var(--bg)}
+    .name{text-align:center;font-weight:700;font-size:18px;margin:6px 0 2px}
+    .role{text-align:center;color:var(--muted);font-size:13px;margin:0 0 12px}
+    .social{display:flex;justify-content:center;gap:10px;margin:10px 0 16px}
+    .social a{width:34px;height:34px;display:grid;place-items:center;border:1px solid var(--line);border-radius:12px}
+    .badges{display:grid;gap:10px}
+    .badge{display:flex;justify-content:space-between;align-items:center;background:#fff7d6;border:1px dashed var(--primary);padding:6px 10px;border-radius:10px;font-size:12px}
+    .badge span:last-child{font-weight:600}
 
-       
-		<!-- Download CV Button -->
-		<a class="cta" href="cv.pdf" download="My-CV.pdf" class="btn">Download CV</a>
-      </aside>
+    .section{padding:16px 28px;border-top:1px solid var(--line)}
+    .section h3{margin:0 0 12px;font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:#111827}
+    body.dark .section h3{color:#f9fafb}
+    .lang,.skills,.extras{display:grid;gap:10px}
 
-      <!-- Main content -->
-      <main id="main" class="main">
-        <section id="home" class="hero" aria-label="Intro">
-          <div>
-            <h1>I'm William D Cooper<br><span class="accent">Front‑end</span> Developer</h1>
-            <p>
-              I design and build fast, accessible, SEO‑friendly interfaces that scale. My focus is on clean
-			  component architectures, semantic HTML, modern CSS, and performance‑driven JavaScript. I partner with 
-			  teams to turn ideas into production‑ready web apps—tested, documented, and responsive across devices.
-            </p>
-            <div class="buttons">
-              <a href="#contact" class="btn" aria-label="Hire me">HIRE ME →</a>
-              <a href="#services" class="btn secondary" aria-label="My work">MY SERVICES</a>
-            </div>
-          </div>
-          <div class="hero-figure" aria-hidden="true">
-            <div class="figure">
-              <img src="Will.png" alt="William D Cooper">
-            </div>
-          </div>
-        </section>
+    .bar{height:8px;background:#f3f4f6;border-radius:999px;overflow:hidden}
+    .bar > i{display:block;height:100%;background:var(--primary)}
+    .kv{display:flex;justify-content:space-between;font-size:13px}
 
-        <section id="services" class="section-card" aria-label="My services">
-          <h2>My Services</h2>
-          <p class="lead">Offering professional web development, UI/UX design, sound design,
-		  game design, photography, and advertising solutions tailored to client needs.</p>
-          <div class="services" role="list">
-            <article class="service" role="listitem">
-              <i aria-hidden="true">💻</i>
-              <h4>Web Development</h4>
-              <p>Blogs, E‑commerce, Informational etc</p>
-            </article>
-            <article class="service" role="listitem">
-              <i aria-hidden="true">📱</i>
-              <h4>UI/UX Design</h4>
-              <p>Mobile App, Website Design</p>
-            </article>
-            <article class="service" role="listitem">
-              <i aria-hidden="true">🎙️</i>
-              <h4>Software Development</h4>
-              <p>Busines</p>
-            </article>
-            <article class="service" role="listitem">
-              <i aria-hidden="true">🎮</i>
-              <h4>Auto Cad Project</h4>
-              <p>House plan, 3D, </p>
-            </article>
-            <article class="service" role="listitem">
-              <i aria-hidden="true">📷</i>
-              <h4>Graphic Design</h4>
-              <p>Product Design</p>
-            </article>
-            <article class="service" role="listitem">
-              <i aria-hidden="true">📣</i>
-              <h4>Advertising</h4>
-              <p>Creative campaigns and digital marketing support.</p>
-            </article>
-          </div>
-        </section>
+    .cta{display:block;margin:16px 28px 24px;padding:12px 14px;background:var(--primary);border:none;border-radius:12px;font-weight:700;text-align:center;cursor:pointer}
+    .cta:hover{background:var(--primary-600)}
 
-        <section id="contact" class="section-card" aria-label="Contact">
-          <h2>Contact</h2>
-          <p class="lead">Want to work together? Send a message and let's build something great.</p>
-          <form name="contact" method="post" data-netlify="true" style="max-width:680px;margin:0 auto;display:grid;gap:12px">
-            <input type="hidden" name="form-name" value="contact">
-            <label>Full name
-              <input required name="name" autocomplete="name" placeholder="Your name" style="width:100%;padding:12px;border:1px solid var(--line);border-radius:12px">
-            </label>
-            <label>Email
-              <input required type="email" name="email" autocomplete="email" placeholder="you@example.com" style="width:100%;padding:12px;border:1px solid var(--line);border-radius:12px">
-            </label>
-            <label>Message
-              <textarea required name="message" rows="4" placeholder="Tell me about your project" style="width:100%;padding:12px;border:1px solid var(--line);border-radius:12px"></textarea>
-            </label>
-            <button class="btn" type="submit" style="justify-content:center">Send Message</button>
-          </form>
-        </section>
+    /* Main */
+    .main{display:grid;gap:24px}
+    .hero{display:grid;grid-template-columns:1.3fr .7fr;gap:12px;align-items:center;background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:28px;position:relative}
+    .hero h1{font-size:44px;line-height:1.15;margin:8px 0}
+    .hero .accent{color:var(--primary)}
+    .hero p{color:var(--muted);max-width:60ch}
+    .hero .buttons{display:flex;gap:12px;margin-top:14px}
+    .btn{display:inline-flex;align-items:center;gap:8px;background:var(--primary);padding:12px 16px;border-radius:12px;font-weight:700;cursor:pointer}
+    .btn.secondary{background:#111827;color:#fff}
 
-      </main>
-    </div>
-  </div>
+    .hero-figure{display:grid;place-items:center; border-radius: 50%;}
+    .figure{width:100%;max-width:360px;aspect-ratio:1/1;border-radius:50%;
+	border:1px solid var(--line);box-shadow:var(--shadow);display:grid;place-items:center;overflow:hidden; }
+    .figure img{width:70%;border-radius:24px;background-size: cover;}
+	
+	.fb-link {
+  display: inline-block; /* allows width/height */
+  width: 150px;
+  height: 50px;
+  background-image: url('fb.png');
+  background-size: cover; /* make it fill */
+  background-position: center;
+  background-repeat: no-repeat;
+  text-indent: -9999px; /* hide the text if you only want image */
+}
 
-  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="index.js"></script>
- 
-</body>
-</html>
+
+	.whatsapp-link{
+  display: inline-block; /* allows width/height */
+  width: 150px;
+  height: 50px;
+  background-image: url('whatsapp.png');
+  background-size: cover; /* make it fill */
+  background-position: center;
+  background-repeat: no-repeat;
+  text-indent: -9999px; /* hide the text if you only want image */
+}
+
+ .instagram{
+  display: inline-block; /* allows width/height */
+  width: 150px;
+  height: 50px;
+  background-image: url('instagram.png');
+  background-size: cover; /* make it fill */
+  background-position: center;
+  background-repeat: no-repeat;
+  text-indent: -9999px; /* hide the text if you only want image */
+}
+
+.linkin{
+  display: inline-block; /* allows width/height */
+  width: 150px;
+  height: 50px;
+  background-image: url('linkedin.png');
+  background-size: cover; /* make it fill */
+  background-position: center;
+  background-repeat: no-repeat;
+  text-indent: -9999px; /* hide the text if you only want image */
+}
+	
+
+    .section-card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:28px}
+    .section-card h2{margin:0 0 6px;text-align:center;font-size:26px}
+    .section-card p.lead{color:var(--muted);text-align:center;margin:0 0 20px}
+
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .service{border:1px solid var(--line);border-radius:16px;padding:22px;display:grid;gap:8px}
+    .service i{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:#fff7d6;border:1px solid var(--primary)}
+    .service h4{margin:4px 0}
+    .service p{color:var(--muted);font-size:14px;margin:0}
+
+    /* Responsive */
+    @media (max-width: 1100px){
+      .grid{grid-template-columns:280px 1fr}
+      .hero{grid-template-columns:1fr; text-align:left}
+      .hero-figure{order:-1}
+      .hero h1{font-size:38px}
+    }
+    @media (max-width: 900px){
+      .grid{grid-template-columns:1fr}
+      .sidebar{position:relative;top:auto}
+      .hero{padding:22px}
+      .services{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:600px){
+      .container{padding:16px}
+      .hero h1{font-size:32px}
+      .services{grid-template-columns:1fr}
+    }
