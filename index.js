@@ -54,12 +54,12 @@
           doc.setFont('helvetica','normal'); doc.setTextColor(mR,mG,mB); doc.setFontSize(11);
           doc.text('Dhaka, Bangladesh  ·  Freelance: Available  ·  email@example.com  ·  +880 000 000 0000', 40, 310);
 
-          doc.save('cv.pdf');
+          doc.save('mycv.pdf');
         }catch(err){
           // Fallback: trigger download of a static PDF if you place one at this path
-          const url = 'cv.pdf';
+          const url = 'mycv.pdf';
           const a = document.createElement('a');
-          a.href = url; a.download = 'cv.pdf';
+          a.href = url; a.download = 'mycv.pdf';
           document.body.appendChild(a); a.click(); a.remove();
         }
       };
